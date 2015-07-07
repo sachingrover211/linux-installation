@@ -1,4 +1,4 @@
-\* means requires root access
+\* means - command requires root access
 
 ###Languages
 
