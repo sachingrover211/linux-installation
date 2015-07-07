@@ -42,7 +42,7 @@ Latest mysql folder gives you binaries. You need to put them at various places l
 Easier way was to just install `apt-get install mysql-server` \*
 
 ###Softwares
-####Git
+####GIT
 use command `apt-get install git` \*
 
 ####Eclipse
@@ -64,3 +64,5 @@ Now to test it run eclipse from the menu.
 To install latest apache version idea is - Do not try this. For one reason Apache installation needs Apache Portable Runtime Library, and which does not install with out of the box version of GCC, it needs gcc-5 compiler where as the version available is gcc-v4.8.4. 
 
 Updating GCC I have not tried that. Someday!
+
+So the command for this is `apt-get install apache2` \*
