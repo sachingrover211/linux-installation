@@ -1,4 +1,4 @@
-\* means - command requires root access
+\* means requires root access
 
 ###Languages
 
@@ -7,7 +7,7 @@
 * put it in /usr/lib - in that there is some folder related to java, jdk, or jvm (where openjdk is kept). I usually mv latest java to that place \*
 * update alternatives - alternatives can be found at placed at `/etc/alternatives` \*
 	- update-alternatives --install "usr/bin/\<name\>" \<name\> \<path to bin/\<name\>\> 1
-	- name can be - java, javac, jexecm javaws, javap, javah and javadoc
+	- name can be - java, javac, jexecm javaws, javap, javah, jar, jarsigner and javadoc
 * config alternatives \*
 	- update-alternatives --config \<name\>
 	- name is java, javac, jexec, javaws, javap, javah and javadoc
@@ -46,6 +46,7 @@ Easier way was to just install `apt-get install mysql-server` \*
 use command `apt-get install git` \*
 
 ####Eclipse
+Pre-req - JAVA is needed.
 The base ubuntu repository has a very old version of eclipse. So in case you dont want the old version, then follow the steps below.
 
 Steps:
@@ -57,7 +58,7 @@ Steps:
 	- `desktop-file-install eclipse.desktop` \*
 	- copy and paste the file at `/usr/share/applications`
 
-Now to test it run eclipse
+Now to test it run eclipse from the menu.
 
 ####Apache
 To install latest apache version idea is - Do not try this. For one reason Apache installation needs Apache Portable Runtime Library, and which does not install with out of the box version of GCC, it needs gcc-5 compiler where as the version available is gcc-v4.8.4. 
