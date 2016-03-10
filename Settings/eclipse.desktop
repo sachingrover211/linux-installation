@@ -1,9 +1,9 @@
 [Desktop Entry]
 Name=Eclipse 
 Type=Application
-Exec=env UBUNTU_MENUPROXY=0 eclipse
+Exec=env UBUNTU_MENUPROXY=0 <absolute path to executable>/eclipse
 Terminal=false
-Icon=eclipse
+Icon=<absolute path to folder>/icon.xpm
 Comment=Integrated Development Environment
 NoDisplay=false
 Categories=Development;IDE;
