@@ -39,7 +39,7 @@ Issues faced -
 * There is a configuration file in `apache2.conf` in `/etc/apache2`. Make sure the settings in `<Directory>` structure is correct. It has a setting for the folder where you want to place your code.
 
 ###PHP setup with Apache
-The idea for this is to make sure Apache runs PHP files. For software manager installation there is a php.ini file in `/etc/php5/apache2` which will have all the settings. The latest installations come with all the setting for apache to run php. If you want to see errors then do these changes to php.ini - 
+The idea for this is to make sure Apache runs PHP files. For software manager installation there is a php.ini file in `/etc/php5/apache2` or at `/usr/share/php5` which will have all the settings. If you still can't find it then check for development and production copies of `php.ini-<server type>`, and copy one of those to a `php.ini` file. The latest installations come with all the setting for apache to run php. If you want to see errors then do these changes to php.ini - 
 
 * set error_reporting=E_ALL
 * set display_errors=On
