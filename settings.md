@@ -37,9 +37,10 @@ Issues faced -
 * Wanted to change the folder `/var/www/html` to `/var/www`. Did this by updating the DocumentRoot in config file. In /etc/apache2 there is a sites-available folder. In that you will see all the website configuration files that we have. In parallel there is a sites-enabled folder will show you which file is being used. Update that file to html folder from DocumentRoot.
 * In `/etc/apache2` there is a file called envvars (read environment variables). There it sets `APACHE_RUN_USER` and `APACHE_RUN_GROUP` to `www-data`. Either update this to your user and group or update your folders to `www-data` user and group using chown. This would create problems when you make symboliclinks to your website folders.
 * There is a configuration file in `apache2.conf` in `/etc/apache2`. Make sure the settings in `<Directory>` structure is correct. It has a setting for the folder where you want to place your code.
+* Test whether apache is running PHP or not by creating an `index.php` in `/var/www folder`. Add `phpinfo();` to it, and if this does not show the complete php information then there is a library file missing. Install it using command `apt-get install libapache2-mod-php5`*.
 
 ###PHP setup with Apache
-The idea for this is to make sure Apache runs PHP files. For software manager installation there is a php.ini file in `/etc/php5/apache2` or at `/usr/share/php5` which will have all the settings. If you still can't find it then check for development and production copies of `php.ini-<server type>`, and copy one of those to a `php.ini` file. The latest installations come with all the setting for apache to run php. If you want to see errors then do these changes to php.ini - 
+The idea for this is to make sure Apache runs PHP files. For software manager installation there is a php.ini file in `/etc/php5/apache2` or at `/usr/share/php5` which will have all the settings for php. If you still can't find it then check for development and production copies of `php.ini-<server type>`, and copy one of those to create a `php.ini` file. I prefer the development one. The latest installations come with all the setting for apache to run php. If there isn't then check the last point in Apache installation. If you want to see errors then do these changes to php.ini - 
 
 * set error_reporting=E_ALL
 * set display_errors=On
